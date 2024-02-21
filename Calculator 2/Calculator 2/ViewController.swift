@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     
     @IBAction func numberButtonPressed(_ sender: UIButton) {
         if let number = sender.titleLabel?.text {
-            if calcNumberLabel.text == "0" || calcNumberLabel.text == previousNumber {
+            if  calcNumberLabel.text == "0" || calcNumberLabel.text == previousNumber {
                 calcNumberLabel.text = ""
             }
             currentNumber.append(number)
@@ -76,9 +76,9 @@ class ViewController: UIViewController {
 
     @IBAction func percentageButtonPressed(_ sender: UIButton) {
         guard currentNumber.contains("0.") else {
-            currentNumber = "0." + currentNumber
-            calcNumberLabel.text = currentNumber
-            return
+              currentNumber = "0." + currentNumber
+              calcNumberLabel.text = currentNumber
+              return
         }
     }
 
